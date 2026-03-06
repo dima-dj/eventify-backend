@@ -1,0 +1,29 @@
+# ================================================================
+# EVENTIFY — requirements.txt
+# Python version :  3.14.3
+# Pour installer : pip install -r requirements.txt
+# ================================================================
+
+# --- Framework principal ---
+fastapi>=0.119.1           # Le framework web API
+
+# --- Serveur ASGI ---
+uvicorn==0.29.0            # Lance le serveur : uvicorn app.main:app --reload
+
+# --- Connexion MySQL ---
+mysql-connector-python==8.3.0  # Driver MySQL pour Python
+
+# --- Validation des données ---
+pydantic>=2.12.0           # Validation automatique
+pydantic-settings>=2.3.0   # Pour lire le fichier .env dans config.py
+
+# --- Sécurité — 
+bcrypt==4.2.1              # hash des mots de passe admin avec bcrypt
+python-jose[cryptography]==3.3.0  # Génération et vérification JWT
+
+# --- Emails ---
+fastapi-mail==1.4.1        # Envoi d'emails avec templates HTML
+
+# --- Export Excel ---
+openpyxl==3.1.2            # Génération fichiers .xlsx pour l'export admin
+
