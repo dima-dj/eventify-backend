@@ -23,22 +23,24 @@ class Settings(BaseSettings):
     DB_PASSWORD: str
     DB_NAME: str
 
+    SMTP_USER: str
+    SMTP_PASSWORD: str
     # --- JWT ---
-    JWT_SECRET_KEY: str
-    JWT_ALGORITHM: str = "HS256"    # valeur par défaut si absent du .env
-    JWT_EXPIRE_HOURS: int = 8
+    #JWT_SECRET_KEY: str
+    #JWT_ALGORITHM: str = "HS256"    # valeur par défaut si absent du .env
+    #JWT_EXPIRE_HOURS: int = 8
 
     # --- Email ---
-    MAIL_USERNAME: str
-    MAIL_PASSWORD: str
-    MAIL_FROM: str
-    MAIL_PORT: int = 587
-    MAIL_SERVER: str
-    MAIL_TLS: bool = True
-    MAIL_SSL: bool = False
+    #MAIL_USERNAME: str
+    #MAIL_PASSWORD: str
+    #MAIL_FROM: str
+    #MAIL_PORT: int = 587
+    #MAIL_SERVER: str
+    #MAIL_TLS: bool = True
+    #MAIL_SSL: bool = False
 
     # --- Application ---
-    DEBUG: bool = False
+    DEBUG: bool = True
     FRONTEND_URL: str = "http://localhost:5500"
 
     class Config:

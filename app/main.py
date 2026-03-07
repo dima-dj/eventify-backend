@@ -18,6 +18,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
+from app.features.registrations.router import router as registration_router
 
 # ----------------------------------------------------------------
 # On importera les routers ici au fur et à mesure qu'on les crée
@@ -67,7 +68,10 @@ app.add_middleware(
     allow_headers=["*"],             # Authorization, Content-Type, etc.
 )
 
-
+app.include_router(
+    registration_router,
+    tags=["Registrations"]         # ça les met dans un groupe dans Swagger
+)
 # ----------------------------------------------------------------
 # Enregistrement des routers
 # prefix="/api" → tous les endpoints commencent par /api/...
@@ -91,3 +95,4 @@ def health_check():
         "version": "1.0.0",
         "debug": settings.DEBUG,
     }
+
