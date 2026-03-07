@@ -27,7 +27,7 @@ from app.config import settings
 # from app.features.events.router import router as events_router
 # from app.features.registrations.router import router as registrations_router
 # from app.features.members.router import router as members_router
-# from app.features.auth.router import router as auth_router
+from app.features.auth.router import router as auth_router
 
 
 # ----------------------------------------------------------------
@@ -76,7 +76,7 @@ app.add_middleware(
 # app.include_router(events_router,        prefix="/api", tags=["Events"])
 # app.include_router(registrations_router, prefix="/api", tags=["Registrations"])
 # app.include_router(members_router,       prefix="/api", tags=["Members"])
-# app.include_router(auth_router,          prefix="/api", tags=["Auth"])
+app.include_router(auth_router,          prefix="/api", tags=["Auth"])
 
 
 # ----------------------------------------------------------------

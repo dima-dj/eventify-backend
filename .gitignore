@@ -15,3 +15,7 @@ venv/
 
 # OS files
 Thumbs.db
+
+#scripts 
+create-admin.py
+delete-admin.py
