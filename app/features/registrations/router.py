@@ -1,7 +1,7 @@
 # app/features/registrations/router.py
 from fastapi import APIRouter, HTTPException
 from app.features.registrations.schemas import RegistrationForm,  VerifyRegistration, EmailRequest
-from app.features.registrations.service import generate_otp, send_otp_email, save_otp, verify_otp, insert_user, check_discord, insert_registration
+from app.features.registrations.service import generate_otp, send_otp_email, save_otp, verify_otp, insert_user, check_discord, insert_registration, check_registration_period
 
 router = APIRouter(prefix="/registration", tags=["Registrations"])
 
@@ -23,9 +23,7 @@ def submit_registration(data:  EmailRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# -----------------------------
-# 2. Vérification OTP -> insertion user et role
-# -----------------------------
+
 @router.post("/verify-otp")
 def verify_registration(data: VerifyRegistration):
     try:
@@ -39,3 +37,24 @@ def verify_registration(data: VerifyRegistration):
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+@router.get("/form-status")
+def get_registration_status():
+    status, start, end = check_registration_period()
+    
+    if status == "no_event":
+        raise HTTPException(status_code=404, detail="Aucun événement trouvé")
+    
+    if status == "not_open":
+        return {
+            "status": "not_open",
+            "message": f"Le formulaire n'est pas encore ouvert. Il ouvrira le {start.strftime('%d/%m/%Y à %H:%M')}"
+        }
+    
+    if status == "closed":
+        return {
+            "status": "closed",
+            "message": f"Le formulaire est fermé depuis le {end.strftime('%d/%m/%Y à %H:%M')}"
+        }
+    
+    return {"status": "open", "message": "Le formulaire est ouvert"}

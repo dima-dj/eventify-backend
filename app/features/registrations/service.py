@@ -186,3 +186,27 @@ def insert_registration(user_id):
     finally:
         if conn.is_connected():
             conn.close()
+
+def check_registration_period():
+    conn = get_db_connection()
+    try:
+        cursor = conn.cursor(dictionary=True)
+        cursor.execute("SELECT START_REGISTRATION, END_REGISTRATION FROM EVENT ORDER BY ID_EVENT DESC LIMIT 1")
+        event = cursor.fetchone()
+        
+        if not event:
+            return "no_event", None, None
+        
+        now = datetime.now()
+        start = event["START_REGISTRATION"]
+        end = event["END_REGISTRATION"]
+        
+        if now < start:
+            return "not_open", start, end
+        elif now > end:
+            return "closed", start, end
+        else:
+            return "open", start, end
+    finally:
+        if conn.is_connected():
+            conn.close()
