@@ -24,7 +24,7 @@ from app.config import settings
 # Exemple : from app.features.events.router import router as events_router
 # Pour l'instant ils sont commentés — on les décommentera sprint par sprint
 # ----------------------------------------------------------------
-# from app.features.events.router import router as events_router
+from app.features.event.router import router as events_router
 # from app.features.registrations.router import router as registrations_router
 # from app.features.members.router import router as members_router
 from app.features.auth.router import router as auth_router
@@ -73,7 +73,7 @@ app.add_middleware(
 # prefix="/api" → tous les endpoints commencent par /api/...
 # tags → groupe les endpoints dans la doc Swagger
 # ----------------------------------------------------------------
-# app.include_router(events_router,        prefix="/api", tags=["Events"])
+app.include_router(events_router,        prefix="/api", tags=["Events"])
 # app.include_router(registrations_router, prefix="/api", tags=["Registrations"])
 # app.include_router(members_router,       prefix="/api", tags=["Members"])
 app.include_router(auth_router,          prefix="/api", tags=["Auth"])
