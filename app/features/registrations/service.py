@@ -160,8 +160,7 @@ def insert_user(form_data):
         if conn.is_connected():
             conn.close()
 
-from datetime import date
-from app.database import get_db_connection  # ou ton import réel
+
 
 def insert_registration(user_id):
     conn = get_db_connection()  # connexion à la base

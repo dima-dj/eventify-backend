@@ -32,14 +32,10 @@ class RegistrationForm(BaseModel):
     preferred_role: Optional[Literal["TECHNICAL_SUPPORT","LOGISTICS","COMMUNICATION","ORGANIZATION"]] = None
     organized_before: Optional[bool] = False
 
-class OTPRequest(BaseModel):
+class EmailRequest(BaseModel):
     email: EmailStr
 
-class VerifyOTPRequest(BaseModel):
-    email: EmailStr
-    otp: str
 
 class VerifyRegistration(BaseModel):
-    email: str
     otp: str
     form: RegistrationForm
