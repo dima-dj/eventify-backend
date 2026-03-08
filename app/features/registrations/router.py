@@ -40,7 +40,7 @@ def verify_registration(data: VerifyRegistration):
     
 @router.get("/form-status")
 def get_registration_status():
-    status, start, end = check_registration_period()
+    status, start, end, seconds_left = check_registration_period()
     
     if status == "no_event":
         raise HTTPException(status_code=404, detail="Aucun événement trouvé")
@@ -56,5 +56,18 @@ def get_registration_status():
             "status": "closed",
             "message": f"Le formulaire est fermé depuis le {end.strftime('%d/%m/%Y à %H:%M')}"
         }
-    
-    return {"status": "open", "message": "Le formulaire est ouvert"}
+     
+    days    = seconds_left // 86400
+    hours   = (seconds_left % 86400) // 3600
+    minutes = (seconds_left % 3600) // 60
+    seconds = seconds_left % 60
+    return {
+        "status": "open",
+        "message": "Le formulaire est ouvert",
+        "countdown": {
+            "days": days,
+            "hours": hours,
+            "minutes": minutes,
+            "seconds": seconds,
+            "total_seconds": seconds_left
+        }}

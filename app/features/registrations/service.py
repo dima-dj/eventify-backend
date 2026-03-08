@@ -195,18 +195,19 @@ def check_registration_period():
         event = cursor.fetchone()
         
         if not event:
-            return "no_event", None, None
+            return "no_event", None, None, None
         
         now = datetime.now()
         start = event["START_REGISTRATION"]
         end = event["END_REGISTRATION"]
         
         if now < start:
-            return "not_open", start, end
+            return "not_open", start, end, None
         elif now > end:
-            return "closed", start, end
+            return "closed", start, end, None
         else:
-            return "open", start, end
+            seconds_left = int((end - now).total_seconds())
+            return "open", start, end, seconds_left
     finally:
         if conn.is_connected():
             conn.close()
