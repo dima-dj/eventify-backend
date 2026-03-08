@@ -1,7 +1,10 @@
 # app/features/registrations/router.py
 from fastapi import APIRouter, HTTPException
 from app.features.registrations.schemas import RegistrationForm,  VerifyRegistration, EmailRequest
-from app.features.registrations.service import generate_otp, send_otp_email, save_otp, verify_otp, insert_user, check_discord, insert_registration, check_registration_period
+from app.features.registrations.service import check_discord, insert_registration, check_registration_period
+from app.features.emails.service import generate_otp, send_otp_email, save_otp, verify_otp
+from app.features.members.service import  insert_user
+
 
 router = APIRouter(prefix="/registration", tags=["Registrations"])
 
