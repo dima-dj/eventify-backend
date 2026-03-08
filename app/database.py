@@ -72,3 +72,7 @@ def get_cursor(connection, dictionary=True):
         user = cursor.fetchone()   # → {"id": 1, "first_name": "Ahmed", ...}
     """
     return connection.cursor(dictionary=dictionary)
+
+def get_db_connection():
+    """Direct connection for service.py — not a generator."""
+    return connection_pool.get_connection()

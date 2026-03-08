@@ -18,14 +18,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
-
-# ----------------------------------------------------------------
-# On importera les routers ici au fur et à mesure qu'on les crée
-# Exemple : from app.features.events.router import router as events_router
-# Pour l'instant ils sont commentés — on les décommentera sprint par sprint
-# ----------------------------------------------------------------
+from app.features.registrations.router import router as registration_router
 from app.features.event.router import router as events_router
-# from app.features.registrations.router import router as registrations_router
 # from app.features.members.router import router as members_router
 from app.features.auth.router import router as auth_router
 
@@ -67,7 +61,10 @@ app.add_middleware(
     allow_headers=["*"],             # Authorization, Content-Type, etc.
 )
 
-
+app.include_router(
+    registration_router,
+    tags=["Registrations"]         # ça les met dans un groupe dans Swagger
+)
 # ----------------------------------------------------------------
 # Enregistrement des routers
 # prefix="/api" → tous les endpoints commencent par /api/...
@@ -91,3 +88,4 @@ def health_check():
         "version": "1.0.0",
         "debug": settings.DEBUG,
     }
+
