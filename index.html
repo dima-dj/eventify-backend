@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="
+    event management,
+    omc,
+    Idathon,
+    hackathon,
+    coding event,
+    Open Minds Club,
+    USTHB event,
+    programming competition,
+    student tech event,
+    algeria hackathon,
+    coding competition,
+    developer event,
+    Eventify platform">
+    <meta name="description" content="
+    Eventify is a platform created by Open Minds Club to manage tech events, hackathons and registrations. 
+    Join the adventure and participate in coding challenges with students and developers.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="frontend/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="frontend/images/OMC.png">
+    <title>EVENTIFY</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="frontend/images/OMC.png" alt="omc logo">
+            <h1>Eventify</h1>
+        </div>
+        <ul class="links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#register-section">Register</a></li>
+        </ul>
+    </header>
+
+
+    <section class="main">
+        <div class="text">
+            <h1 class="text-t"><span class="text-s">Join the adventure</span><br>
+            with <span class="eventify"> Eventify</span></h1>
+        </div>
+        <div class="parg">
+            <img src="frontend/images/Sahm.png" alt="sahm" class="sahm">
+            <p>By Open Minds Club</p>
+        </div>
+        <div class="time">
+            <p class="time-text">Our event is in :</p>
+            <div class="countdown">
+                <div class="box">
+                    <h3 id="days">0</h3>
+                    <p>Days</p>
+                </div>
+                <div class="box">
+                    <h3 id="hours">0</h3>
+                    <p>Hours</p>
+                </div>
+                <div class="box">
+                    <h3 id="minutes">0</h3>
+                    <p>Minutes</p>
+                </div>
+                <div class="box">
+                    <h3 id="seconds">0</h3>
+                    <p>Seconds</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <a href="#register-section">Register now</a>
+        </div>
+    </section>
+<!--suite-->
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About the event</h2>
+            <p class="about-text">
+                Join us for an inspiring and dynamic event designed to bring passionate minds together.<br><br>
+                This experience offers participants the opportunity to learn, collaborate, and challenge themselves in a motivating environment.<br><br>
+                Whether you are looking to expand your network, gain new skills, or simply be part of an energetic community, this event is the perfect place to start.
+            </p>
+        <h2 class="roles-title">Roles & participation</h2>
+
+        <div class="roles-timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Participant</h3>
+                    <p>Engage in challenges, work solo or in a team, submit your work, and earn badges or recognition.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Staff</h3>
+                    <p>Support the event operations behind the scenes, ensure everything runs smoothly, and help participants as needed.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Mentor</h3>
+                    <p>Provide guidance, answer questions, and offer advice to help participants succeed in their tasks.</p>
+                </div>
+            </div>
+
+        </div>
+
+            <h2>How it works?</h2>
+            <p class="how-text">
+                Choose how you want to be involved in the event. Whether you want to compete as a participant,
+                 guide others as a mentor or support operations as staff, there’s a role for everyone. 
+                 Each role comes with its own responsibilities and ways to contribute, ensuring everyone can make an impact.
+            </p>
+
+            <h2>Event agenda</h2>
+
+            <div class="agenda-wrapper">
+
+                <div class="agenda-item">
+                    <strong>Day 01:</strong> Kickoff & Setup
+                </div>
+
+                <div class="agenda-item">
+                    <strong>Day 02:</strong> Work & Collaboration
+                </div>
+
+                <div class="agenda-item">
+                    <strong>Day 03:</strong> Final Submission & Closing
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="register" id="register-section">
+        <div class="container">
+            <h2>Register now</h2>
+
+            <div class="progress">
+                <div class="step active">1</div>
+                <div class="step">2</div>
+                <div class="step">3</div>
+            </div>
+
+
+
+            <!-- FORM 1 : Info personnelle -->
+            <form class="register-form" id="form1">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name : *</label>
+                        <input type="text" id="firstName" name="firstName" required maxlength="15">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name : *</label>
+                        <input type="text" id="lastName" name="lastName" required maxlength="15">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email : *</label>
+                    <input type="email" id="emailInput" name="email" required maxlength="200" autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label>Phone number : *</label>
+                    <input type="tel" id="phone" name="phone" required minlength="10" maxlength="12" pattern="[0-9+\-() ]{7,32}">
+                </div>
+                <div class="form-group">
+                    <label>Discord username : *</label>
+                    <input type="text" id="discordUsername" name="discordUsername" required maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label>University :</label>
+                    <input type="text" id="university" name="university" maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label>Field of Study / Current Position : *</label>
+                    <input type="text" id="fieldOfStudy" name="fieldOfStudy" maxlength="100" required>
+                </div>
+                <div class="form-group">
+                    <label>Role selection :</label>
+                    <select required id="roleSelect" name="role">
+                        <option value="participant">Participant</option>
+                    </select>
+                </div>
+                <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+                    <button type="button" class="btn-register" id="next1">Next →</button>
+                </div>
+            </form>
+
+            <!-- FORM 2 : Participant -->
+            <form class="register-form" id="form2" style="display: none; margin-top: 40px;">
+                <div class="form-group">
+                    <label>Do you already have a team? *:</label>
+                      <label class="radio-option">
+                            <input type="radio" name="team" value="yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="team" value="no">
+                            <span>No</span>
+                        </label>
+                </div>
+                <div class="form-group">
+                    <label>if yes, add your team name :</label>
+                    <input type="text" id="teamName" name="teamName" maxlength="80">
+                </div>
+                <div class="form-group">
+                    <label>Programming languages or tools you use :</label>
+                    <input type="text" id="tools" name="tools" required maxlength="200">
+                </div>
+                <div class="form-group">
+                    <label>Why do you want to participate? :</label>
+                    <input type="text" id="motivation" name="motivation" required maxlength="300">
+                </div>
+                <div class="form-group">
+                    <label>What do you expect from this event? :</label>
+                    <input type="text" id="expectations" name="expectations" maxlength="300">
+                </div>
+                <div class="form-group">
+                    <label>Your main skills :</label>
+                    <input type="text" id="mainSkills" name="mainSkills" maxlength="200">
+                </div>
+                <div class="form-group">
+                    <label>Skill Level :</label>
+                    <select required id="skillLevelSelect" name="skillLevel">
+                        <option value="">Select your skill level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                    <button type="button" class="btn-register" id="back2">← Back</button>
+                    <button type="button" class="btn-register" id="next2">Next →</button>
+                </div>
+            </form>
+
+            <!-- FORM 3 : Mentor -->
+            <form class="register-form" id="form3" style="display: none; margin-top: 40px;">
+                <div class="form-group">
+                    <label>Years of Experience :</label>
+                    <input type="text" id="yearsExperience" name="yearsExperience" required maxlength="40" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Portfolio :</label>
+                    <input type="url" id="portfolio" name="portfolio" maxlength="200" placeholder="https://..." autocomplete="url">
+                </div>
+                <div class="form-group">
+                    <label>Area of Expertise :</label>
+                    <input type="text" id="expertiseArea" name="expertiseArea" maxlength="120" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Technologies / Tools mastered :</label>
+                    <input type="text" id="masteredTools" name="masteredTools" maxlength="200" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Have you mentored before?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="mentored" value="yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="mentored" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                <label>Availability during the event :</label>
+                <div id="shiftsMentor">
+                    <div class="shift-row">
+                        <select class="shift-day">
+                            <option value="">Day</option>
+                            <option value="day1">Day 1</option>
+                            <option value="day2">Day 2</option>
+                            <option value="day3">Day 3</option>
+                        </select>
+                        <select class="shift-time">
+                            <option value="">Shift</option>
+                            <option value="morning">Morning</option>
+                            <option value="afternoon">Afternoon</option>
+                            <option value="evening">Evening</option>
+                            <option value="full">Full day</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" class="add-shift-btn" onclick="addShift('shiftsMentor')">+ add shift</button>
+                <input type="hidden" id="availabilityMentor" name="availability">
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                    <button type="button" class="btn-register" id="back3">← Back</button>
+                    <button type="button" class="btn-register" id="next3">Next →</button>
+                </div>
+            </form>
+
+            <!-- FORM 4 : Staff -->
+            <form class="register-form" id="form4" style="display: none; margin-top: 40px;">
+                <div class="form-group">
+                    <label>Preferred Role :</label>
+                    <input type="text" id="preferredRole" name="preferredRole" required maxlength="120" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Have you helped organize events before? (yes/no) :</label>
+                    <select id="organizedBefore" name="organizedBefore" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Availability during the event :</label>
+                    <div id="shiftsStaff">
+                        <div class="shift-row">
+                            <select class="shift-day">
+                                <option value="">Day</option>
+                                <option value="day1">Day 1</option>
+                                <option value="day2">Day 2</option>
+                                <option value="day3">Day 3</option>
+                            </select>
+                            <select class="shift-time">
+                                <option value="">Shift</option>
+                                <option value="morning">Morning</option>
+                                <option value="afternoon">Afternoon</option>
+                                <option value="evening">Evening</option>
+                                <option value="full">Full day</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="add-shift-btn" onclick="addShift('shiftsStaff')">+ add shift</button>
+                    <input type="hidden" id="availabilityStaff" name="availability">
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                    <button type="button" class="btn-register" id="back4">← Back</button>
+                    <button type="button" class="btn-register" id="next4">Next →</button>
+                </div>
+            </form>
+
+            <!-- FORM FINAL : Confirmation -->
+            <div class="register-form" id="final" style="display: none; margin-top: 40px; text-align: center;">
+                <h4>Registration complete!</h4>
+                <p>Thanks for joining Eventify. Keep an eye on your inbox for updates.</p>
+                <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+                    <button type="button" class="btn-register" id="backFinal">← Back</button>
+                    <button type="button" class="btn-register" id="submitFinal">Submit ✓</button>
+                </div>
+            </div>
+
+            <!-- OTP Verification -->
+            <div class="register-form" id="otpForm" style="display: none; margin-top: 40px; text-align: center;">
+                <h4>Verify Your Email</h4>
+                <p>Please enter the 6-digit OTP sent to your email address.</p>
+                <div style="display: flex; justify-content: center; gap: 10px; margin: 20px 0;">
+                    <input type="text" maxlength="1" class="otp-input" inputmode="numeric" pattern="[0-9]*">
+                    <input type="text" maxlength="1" class="otp-input" inputmode="numeric" pattern="[0-9]*">
+                    <input type="text" maxlength="1" class="otp-input" inputmode="numeric" pattern="[0-9]*">
+                    <input type="text" maxlength="1" class="otp-input" inputmode="numeric" pattern="[0-9]*">
+                    <input type="text" maxlength="1" class="otp-input" inputmode="numeric" pattern="[0-9]*">
+                    <input type="text" maxlength="1" class="otp-input" inputmode="numeric" pattern="[0-9]*">
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+                    <button type="button" class="btn-register" id="backOtp">← Back</button>
+                    <button type="button" class="btn-register" id="verifyOtp">Verify OTP</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+        <div class="footer-left">
+            <img src="frontend/images/OMC.png" alt="logo">
+            <span>Eventify</span>
+        </div>
+
+        <div class="footer-center">
+            <a href="https://www.openmindsclub.net/">OMC website</a>
+        </div>
+
+        <div class="footer-right">
+            <a href="https://discord.com/invite/auupT4xpmP"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/openmindsclub?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/openmindsclub"><i class="fab fa-github"></i></a>
+        </div>
+        </div>
+    </footer>
+    <script src="frontend/js/script.js"></script>
+</body>
+</html>

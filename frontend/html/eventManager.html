@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/eventManager.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+
+<body>
+    <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <header id="sidebar">
+        <div class="logo">
+            <img src="../images/OMC.png" alt="logo">
+            <h1>Eventify</h1>
+        </div>
+        <ul class="links-ul">
+            <li><a href="eventManager.html">Event management</a></li>
+            <li><a href="registrations.html">Registrations</a></li>
+            <li><a href="users.html">Users list</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </header>
+    <main class="dashboard">
+        <button class="create-btn" id="createBtn">
+            + Create event
+        </button>
+        <div class="event-container">
+            <div class="event-overview">
+                <h2>Event Overview</h2>
+                <p>
+                    <strong>Event Name:</strong> Ideathon
+                </p>
+                <p>
+                    <strong>Description:</strong> ************
+                </p>
+                <p>
+                    <strong>Date & time:</strong> 06/03/2026 , 17h
+                </p>
+                <p>
+                    <strong>Number of days:</strong> 3 days
+                </p>
+                <div class="event-buttons">
+                    <button class="btn edit-btn">
+                        Edit event
+                    </button>
+                    <button class="btn delete-btn">
+                        Delete event
+                    </button>
+                </div>
+            </div>
+            <div class="create-form" id="createForm">
+                <h3>Create event</h3>
+                <label>Event name</label>
+                <input type="text" id="eventName" placeholder="Enter event name">
+                <label>Description</label>
+                <input id="eventDescription" type="text" placeholder="Enter event description">
+                <label>Event day</label>
+                <input type="date" id="eventDay">
+                <label>Event time</label>
+                <input type="time" id="eventTime">
+                <label>Event type</label>
+                <select id="eventType">
+                    <option>External</option>
+                    <option>Internal</option>
+                </select>
+                <label>Max number of participant</label>
+
+                <input type="number" id="participants">
+                <label>Max number of staff</label>
+                <input type="number" id="staff">
+                <label>Max number of mentor</label>
+                <input type="number" id="mentor">
+
+                <h4>Staff shift</h4>
+                <div id="staffShiftContainer" class="shift-container">
+                </div>
+                <button type="button" class="add-shift-admin" onclick="addShift('staffShiftContainer')">
+                    + add staff shift
+                </button>
+
+                <h4>Mentor shift</h4>
+                <div id="mentorShiftContainer" class="shift-container">
+                </div>
+                <button type="button" class="add-shift-admin" onclick="addShift('mentorShiftContainer')">
+                    + add mentor shift
+                </button>
+
+                <h4>Agenda</h4>
+                <label>Number of days</label>
+                <input type="number" id="daysNumber" placeholder="Enter number of days">
+                <div id="agendaContainer"></div>
+                <button class="btn save-btn" id="saveEvent">
+                    Save event
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="../js/admin.js"></script>
+    <script src="../js/eventManager.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users list</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/users.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <header id="sidebar">
+        <div class="logo">
+            <img src="../images/OMC.png" alt="omc logo">
+            <h1>Eventify</h1>
+        </div>
+        <ul class="links-ul">
+            <li><a href="eventManager.html">Event management</a></li>
+            <li><a href="registrations.html">Registrations</a></li>
+            <li><a href="users.html">Users list</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </header>
+
+    <main class="dashboard">
+        <div class="users-container">
+            <div class="filter-box">
+                <span>Filter by role</span>
+                <select id="userRoleFilter">
+                    <option value="all">All</option>
+                    <option value="participant">Participant</option>
+                    <option value="staff">Staff</option>
+                    <option value="mentor">Mentor</option>
+                </select>
+            </div>
+
+            <div class="users-list" id="usersList">
+                <!-- Filled by users.js -->
+            </div>
+
+            <div class="user-details" id="userDetails">
+                <!-- Filled by users.js (same layout as registrations details) -->
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/admin.js"></script>
+    <script src="../js/users.js"></script>
+</body>
+
+</html>

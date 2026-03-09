@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Eventify</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+  <div class="card">
+    <h1 class="card-title">
+      Sign In to <span class="highlight">Eventify</span>
+    </h1>
+    <form id="loginForm">
+      <div class="field">
+        <label for="email">Email or Username</label>
+        <input 
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Enter your email or username"
+          autocomplete="username"
+          required
+        >
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input 
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          autocomplete="current-password"
+          required
+        >
+      </div>
+      <div class="btn-wrap">
+        <button type="submit" class="btn-submit">
+          Sign In
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script src="../js/login.js"></script>
+</body>
+</html>

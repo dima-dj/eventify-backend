@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventify Admin Panel</title>
+<link rel="stylesheet" href="../css/admin.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <header id="sidebar">
+        <div class="logo">
+            <img src="../images/OMC.png" alt="omc logo">
+            <h1>Eventify</h1>
+        </div>
+        <ul class="links-ul">
+            <li><a href="eventManager.html">Event management</a></li>
+            <li><a href="registrations.html">Registrations</a></li>
+            <li><a href="users.html">Users list</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+        </header>
+        <main class="dashboard">
+             <div class="welcome-card">
+               <h2>
+                Welcome back, <span class="admin">Admin</span> 👋
+               </h2>
+               <p class="welcome-text">
+                We’re glad to have you here.  
+                This is your control center for managing everything inside 
+                <span class="eventify">Eventify</span>.
+                </p>
+                <p class="welcome-text">
+                From here you can create and manage events, monitor registrations,
+                and keep track of your community members with ease.
+                </p>
+                <p class="welcome-text highlight-msg">
+                  Thank you for helping build an active and inspiring community.
+                  Let’s make the next event amazing 🚀
+                 </p>
+             </div>
+       </main>
+        <script src="../js/admin.js"></script>
+</body>
+</html>

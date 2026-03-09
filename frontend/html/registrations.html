@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrations</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/registrations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <header id="sidebar">
+        <div class="logo">
+            <img src="../images/OMC.png" alt="omc logo">
+            <h1>Eventify</h1>
+        </div>
+        <ul class="links-ul">
+            <li><a href="eventManager.html">Event management</a></li>
+            <li><a href="registrations.html">Registrations</a></li>
+            <li><a href="users.html">Users list</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </header>
+
+    <main class="dashboard">
+        <div class="registrations-container">
+            <div class="filter-box">
+                <span>Filter by role</span>
+                <select id="roleFilter">
+                    <option value="all">All</option>
+                    <option value="participant">Participant</option>
+                    <option value="staff">Staff</option>
+                    <option value="mentor">Mentor</option>
+                </select>
+            </div>
+            <div class="registration-list">
+                <div class="registration-card">
+                    <div class="reg-info">
+                        <p><strong>Registration date</strong></p>
+                        <p>10/03/2026</p>
+                    </div>
+                    <div class="reg-info">
+                        <p><strong>User</strong></p>
+                        <p>xxxxxx</p>
+                    </div>
+                    <div class="reg-actions">
+                        <button class="approve-btn">Approve</button>
+                        <button class="reject-btn">Reject</button>
+                        <button class="details-btn">View details</button>
+                    </div>
+                </div>
+                <div class="registration-card">
+                    <div class="reg-info">
+                        <p><strong>Registration date</strong></p>
+                        <p>10/03/2026</p>
+                    </div>
+                    <div class="reg-info">
+                        <p><strong>User</strong></p>
+                        <p>xxxxxx</p>
+                    </div>
+                    <div class="reg-actions">
+                        <button class="approve-btn">Approve</button>
+                        <button class="reject-btn">Reject</button>
+                        <button class="details-btn">View details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="user-details" id="userDetails">
+                <h3>User details</h3>
+                <div class="details-grid">
+                    <p>First Name</p>
+                    <p>XXXXXX</p>
+                    <p>Last Name</p>
+                    <p>XXXXXX</p>
+                    <p>Email</p>
+                    <p>XXXXXX@gmail.com</p>
+                    <p>Discord username</p>
+                    <p>XXXXXX</p>
+                    <p>University</p>
+                    <p>USTHB</p>
+                    <p>Field of study</p>
+                    <p>INFO</p>
+                    <p>Role</p>
+                    <p>Staff</p>
+                    <p>Preferred role</p>
+                    <p>Technical support</p>
+                    <p>Organized before</p>
+                    <p>Yes</p>
+                    <p>Availability</p>
+                    <p>Morning 9am → 11am</p>
+                </div>
+                <div class="details-actions">
+                    <button class="approve-btn">Approve</button>
+                    <button class="reject-btn">Reject</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/admin.js"></script>
+    <script src="../js/registrations.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#eef2f7,#dce6f7);
+  font-family:"Poppins",sans-serif;
+}
+
+
+/* CARD */
+
+.card{
+  width:700px;
+  max-width:95%;
+  background:#ffffff;
+  border-radius:22px;
+  padding:60px 80px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  border:1px solid rgba(0,0,0,0.05);
+}
+
+
+/* TITLE */
+
+.card-title{
+  text-align:center;
+  font-size:34px;
+  font-weight:700;
+  margin-bottom:50px;
+  color:#222;
+}
+
+.highlight{
+  position:relative;
+  z-index:1;
+}
+
+.highlight::before{
+  content:"";
+  position:absolute;
+  left:-6px;
+  right:-6px;
+  top:50%;
+  height:80%;
+  background:#5389DA87;
+  transform:translateY(-50%) rotate(-5deg);
+  border-radius:6px;
+  z-index:-1;
+}
+
+
+/* INPUT FIELDS */
+
+.field{
+  margin-bottom:28px;
+}
+
+.field label{
+  display:block;
+  font-size:16px;
+  font-weight:500;
+  margin-bottom:10px;
+  color:#444;
+}
+
+.field input{
+  width:100%;
+  padding:16px 18px;
+  border:1.5px solid #d6dce6;
+  border-radius:14px;
+  font-size:16px;
+  outline:none;
+  background:#fafafa;
+  transition:all .25s ease;
+}
+
+.field input:focus{
+  border-color:#4a7bdc;
+  background:white;
+  box-shadow:0 0 0 3px rgba(83,137,218,0.15);
+}
+
+
+/* BUTTON */
+
+.btn-wrap{
+  display:flex;
+  justify-content:center;
+  margin-top:40px;
+}
+
+.btn-submit{
+  padding:16px 55px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#5389da,#3373bd);
+  color:white;
+  font-size:18px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all .25s ease;
+  box-shadow:0 8px 20px rgba(83,137,218,0.3);
+}
+
+.btn-submit:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(83,137,218,0.4);
+}
+
+.btn-submit:active{
+  transform:translateY(0);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:600px){
+
+.card{
+  padding:40px 25px;
+}
+
+.card-title{
+  font-size:26px;
+}
+
+.btn-submit{
+  width:100%;
+}
+
+}
