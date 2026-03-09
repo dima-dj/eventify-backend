@@ -34,6 +34,7 @@ connection_pool = pooling.MySQLConnectionPool(
     user=settings.DB_USER,
     password=settings.DB_PASSWORD,
     database=settings.DB_NAME,
+    connect_timeout=10 
 )
 
 

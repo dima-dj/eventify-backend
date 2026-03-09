@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-#Handles sending emails.
-=======
+
+
+
 import random
 import smtplib
 from app.database import get_db_connection
@@ -62,4 +62,3 @@ def send_otp_email(email: str, otp: str):
        server.send_message(msg)
     
     
->>>>>>> origin/feature/registrationForms

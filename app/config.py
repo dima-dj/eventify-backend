@@ -36,10 +36,11 @@ class Settings(BaseSettings):
     MAIL_SERVER: str
     MAIL_TLS: bool = True
     MAIL_SSL: bool = False
-
+    SMTP_USER: str
+    SMTP_PASSWORD: str
     # --- Application ---
     DEBUG: bool = False
-    FRONTEND_URL: str = "http://localhost:5500"
+    FRONTEND_URL: str = "http://127.0.0.1:5500/index.html"
 
     class Config:
         # Indique à pydantic-settings où chercher le fichier .env
